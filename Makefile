@@ -1,4 +1,6 @@
+SOURCES := $(wildcard *.erl)
+
 compile:
-	erlc temp.erl
+	erlc ${SOURCES}
 test: compile
-	erl -noshell -eval "eunit:test(temp)" -s init stop
+	erl -noshell -eval "eunit:test({dir, \".\"})" -s init stop
