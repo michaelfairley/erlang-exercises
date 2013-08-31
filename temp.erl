@@ -1,6 +1,6 @@
 -module(temp).
 -include_lib("eunit/include/eunit.hrl").
-%% -export([f2c/1, c2f/1, convert/1]).
+-export([f2c/1, c2f/1, convert/1]).
 
 f2c(F) ->
     (F-32)*5/9.
