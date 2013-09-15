@@ -4,7 +4,6 @@
 
 start(N) ->
     MasterPid = spawn_link(?MODULE, master, [N]),
-    process_flag(trap_exit, true),
     register(master, MasterPid).
 
 to_slave(Message, M) ->
